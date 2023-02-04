@@ -12,13 +12,18 @@
   * https://www.rust-lang.org/tools/install
 
 
-
 # Installation of required software
 1. clone this repository (write_sheets)
 2. execute the following commands:
 ```
-cd write_sheets
+sudo apt-get install libssl-dev
 python3 -m pip install virtualenv
+
+cd boomer_supporting_files
+
+python3 -m virtualenv venv_sheets
+source ./venv_sheets/bin/activate
+
 pip3 install oauth2client
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
